@@ -61,7 +61,28 @@ module.exports = {
             options: {
               name: '[name].[ext]',
               outputPath: 'assets/',
-              publicPath: '/etc.clientlibs/myproject2/clientlibs/clientlib-react/assets/img'
+
+              publicPath: (url, resourcePath, context) => {
+                // Custom function to determine publicPath based on the file
+                // if (resourcePath.includes('testimonials')) {
+                //   return `/apps/myproject2/clientlibs/clientlib-react/assets/img/testimonials/${url}`;
+                // }
+                // return `/apps/myproject2/clientlibs/clientlib-react/assets/img/${url}`;
+
+                  // List of directories to check
+                  const directories = ['testimonials', 'team', 'portfolio', 'clients', 'blog'];
+                
+                  // Check if the resource path includes any of the directories
+                  const matchedDir = directories.find(dir => resourcePath.includes(dir));
+                  
+                  if (matchedDir) {
+                    return `/apps/myproject2/clientlibs/clientlib-react/assets/img/${matchedDir}/${url}`;
+                  }
+                  
+                  // Default path if no specific directory is matched
+                  return `/apps/myproject2/clientlibs/clientlib-react/assets/img/${url}`;
+              }
+
             },
           },
         ],

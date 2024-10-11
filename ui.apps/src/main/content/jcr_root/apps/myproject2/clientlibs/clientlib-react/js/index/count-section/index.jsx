@@ -1,37 +1,34 @@
 import React, { useEffect, useState } from 'react';
 import '../../../css/styles.css';
 
+
+
 const CountSection = () => {
-  const [countersInitialized, setCountersInitialized] = useState(false);
+  // const [countersInitialized, setCountersInitialized] = useState(false);
 
-  useEffect(() => {
-    // Load IcoFont CSS from CDN
-    const linkElement = document.createElement('link');
-    linkElement.rel = 'stylesheet';
-    linkElement.href = 'https://cdn.jsdelivr.net/npm/@icon/icofont@1.0.1-alpha.1/icofont.min.css';
-    document.head.appendChild(linkElement);
+  // useEffect(() => {
 
-    // Load and initialize CountUp.js
-    const script = document.createElement('script');
-    script.src = 'https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js';
-    script.async = true;
-    script.onload = () => {
-      if (typeof jQuery !== 'undefined' && jQuery.fn.counterUp) {
-        jQuery('[data-toggle="counter-up"]').counterUp({
-          delay: 10,
-          time: 1000
-        });
-        setCountersInitialized(true);
-      }
-    };
-    document.body.appendChild(script);
+  //   // Load and initialize CountUp.js
+  //   const script = document.createElement('script');
+  //   script.src = 'https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js';
+  //   script.async = true;
+  //   script.onload = () => {
+  //     if (typeof jQuery !== 'undefined' && jQuery.fn.counterUp) {
+  //       jQuery('[data-toggle="counter-up"]').counterUp({
+  //         delay: 10,
+  //         time: 1000
+  //       });
+  //       setCountersInitialized(true);
+  //     }
+  //   };
+  //   document.body.appendChild(script);
 
-    // Cleanup function
-    return () => {
-      document.head.removeChild(linkElement);
-      document.body.removeChild(script);
-    };
-  }, []);
+  //   // Cleanup function
+  //   return () => {
+  //     document.head.removeChild(linkElement);
+  //     document.body.removeChild(script);
+  //   };
+  // }, []);
 
   return (
     <section id="counts" className="counts">

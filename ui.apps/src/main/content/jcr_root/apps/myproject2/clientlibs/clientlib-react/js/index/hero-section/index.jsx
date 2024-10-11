@@ -2,16 +2,16 @@ import React from 'react';
 import '../../../css/styles.css';
 
 // Import the background image for local development
-import heroBgLocal from '../../../assets/img/hero-bg.jpg';
+import heroBg from '../../../assets/img/hero-bg.jpg';
 
 const HeroSection = () => {
-  // Check if we're in AEM environment
-  const isAEM = typeof Granite !== 'undefined';
+  // // Check if we're in AEM environment
+  // const isAEM = typeof Granite !== 'undefined';
   
-  // Use AEM DAM path in AEM environment, local path otherwise
-  const heroBg = isAEM 
-    ? '/content/dam/myproject2/hero-bg.jpg'
-    : heroBgLocal;
+  // // Use AEM DAM path in AEM environment, local path otherwise
+  // const heroBg = isAEM 
+  //   ? '/content/dam/myproject2/hero-bg.jpg'
+  //   : heroBgLocal;
 
   const heroStyle = {
     width: '100%',
