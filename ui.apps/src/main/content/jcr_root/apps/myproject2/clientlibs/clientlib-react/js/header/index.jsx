@@ -16,7 +16,7 @@ const Header = () => {
               <ul>
                 <li><NavLink exact to="/" activeClassName="active">Home</NavLink></li>
                 <li><NavLink to="/about-us" activeClassName="active">About</NavLink></li>              
-                <li><NavLink to="/blog" activeClassName="active">Blog</NavLink></li>
+                {/* <li><NavLink to="/blog" activeClassName="active">Blog</NavLink></li> */}
                 <li className="drop-down">
                   <a href="#">Drop Down</a>
                   <ul>
@@ -25,12 +25,12 @@ const Header = () => {
                       <ul>
                         <li><NavLink exact to="/" activeClassName="active">Home</NavLink></li>
                         <li><NavLink to="/about-us" activeClassName="active">About us</NavLink></li>
-                        <li><NavLink to="/services" activeClassName="active">Services</NavLink></li>
+                        {/* <li><NavLink to="/services" activeClassName="active">Services</NavLink></li>
                         <li><NavLink to="/tnc" activeClassName="active">Terms of service</NavLink></li>
-                        <li><NavLink to="/privacy" activeClassName="active">Privacy policy</NavLink></li>    
+                        <li><NavLink to="/privacy" activeClassName="active">Privacy policy</NavLink></li>     */}
                       </ul>
                     </li> 
-                    <li className="drop-down">
+                    {/* <li className="drop-down">
                       <a href="#">Others</a>
                       <ul>
                         <li><a href="/#services">Our Services</a></li>
@@ -38,8 +38,8 @@ const Header = () => {
                         <li><a href="/#pricing">Pricing</a></li>
                         <li><a href="/#faq">FAQ</a></li> 
                       </ul>
-                    </li>
-                    <li><NavLink to="/blog" activeClassName="active">Blog</NavLink></li>
+                    </li> */}
+                    {/* <li><NavLink to="/blog" activeClassName="active">Blog</NavLink></li> */}
                     <li><NavLink to="/contact" activeClassName="active">Contact Us</NavLink></li>
                   </ul>
                 </li>

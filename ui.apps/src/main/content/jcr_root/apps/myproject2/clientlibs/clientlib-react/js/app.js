@@ -86,6 +86,7 @@ import Header from './header';
 import Index from './index';
 import Footer from './footer';
 import AboutUs from './about-us'; 
+import ContactUs from './contact';
 
 const App = () => {
   useEffect(() => {
@@ -121,6 +122,7 @@ const App = () => {
         <Switch>
           <Route exact path="/" component={Index} />
           <Route path="/about-us" component={AboutUs} />
+          <Route path="/contact" component={ContactUs} />
           {/* Add more routes as needed */}
           <Route component={Index} /> {/* This will catch all other routes and render Index */}
         </Switch>
